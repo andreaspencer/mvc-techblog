@@ -1,8 +1,8 @@
 async function loginFormHandler(event) {
     event.preventDefault();
 
-    const email = document.querySelector('#email-login').ariaValueMax.trim();
-    const passsword = document.querySelector('#password-login').ariaValueMax.trim();
+    const email = document.querySelector('#email-login').value.trim();
+    const passsword = document.querySelector('#password-login').value.trim();
 
     if(email && passsword) {
         const response = await fetch('/api/users/login', {
